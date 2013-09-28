@@ -4,6 +4,8 @@ package com.pohil.vcards;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
+import com.pohil.vcards.dao.TagDao;
+import com.pohil.vcards.dao.WordDao;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -16,6 +18,9 @@ public class DbManager {
     Context context;
     SQLiteDatabase database;
 
+    WordDao wordDao;
+    TagDao tagDao;
+
     public DbManager(Context context) {
         this.context = context;
     }
@@ -26,6 +31,8 @@ public class DbManager {
             copyDbFromAssetes();
         }
         database = SQLiteDatabase.openDatabase(getDBPath(), null, SQLiteDatabase.NO_LOCALIZED_COLLATORS);
+        wordDao = new WordDao(database);
+        tagDao = new TagDao(database);
     }
 
     public SQLiteDatabase getDatabase() {
@@ -60,5 +67,11 @@ public class DbManager {
         return cacheDir.getPath() + File.separator + DB_NAME;
     }
 
+    public WordDao getWordDao() {
+        return wordDao;
+    }
 
+    public TagDao getTagDao() {
+        return tagDao;
+    }
 }

@@ -5,7 +5,7 @@ import android.app.Application;
 
 public class App extends Application {
 
-    DbManager dbManager;
+    static DbManager dbManager;
 
     @Override
     public void onCreate() {
@@ -13,4 +13,10 @@ public class App extends Application {
         dbManager = new DbManager(this);
         dbManager.init();
     }
+
+    public static DbManager getDbManager() {
+        return dbManager;
+    }
+
+
 }

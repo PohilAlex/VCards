@@ -2,8 +2,14 @@ package com.pohil.vcards;
 
 import android.app.Activity;
 import android.os.Bundle;
+import com.pohil.vcards.dao.WordDao;
+import com.pohil.vcards.model.Tag;
+import com.pohil.vcards.model.Word;
 
-public class MyActivity extends Activity {
+import java.util.ArrayList;
+
+public class TagListActivity extends Activity {
+
     /**
      * Called when the activity is first created.
      */
@@ -11,5 +17,10 @@ public class MyActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        ArrayList<Tag> tags = App.getDbManager().getTagDao().getAllTags();
     }
+
+
+
+
 }
