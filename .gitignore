@@ -1,0 +1,8 @@
+# generated folder
+bin
+gen
+
+#idea
+*.idea
+*.iml
+out/
