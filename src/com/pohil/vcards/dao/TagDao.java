@@ -6,7 +6,7 @@ import com.pohil.vcards.model.Tag;
 
 import java.util.ArrayList;
 
-public class TagDao extends BaseDao{
+public class TagDao extends BaseDao {
 
     public TagDao(SQLiteDatabase database) {
         super(database);
@@ -23,5 +23,7 @@ public class TagDao extends BaseDao{
         }
         return list;
     }
+
+
 
 }

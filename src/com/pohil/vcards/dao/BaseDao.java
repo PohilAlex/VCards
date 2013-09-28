@@ -12,4 +12,10 @@ public class BaseDao {
     public BaseDao(SQLiteDatabase database) {
         this.database = database;
     }
+
+    public static String quoteString(String value) {
+        return "'" + value + "'";
+    }
+
+
 }
