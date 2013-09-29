@@ -2,7 +2,10 @@
 <resources>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    <color name="list_background">#ffd1eeff</color>
-    <color name="list_separator">#ff838383</color>
+    <color name="list_background">#ffe5fffd</color>
+    <color name="list_selected_background">#fffffcaa</color>
+    <color name="list_separator">#ffc1c1c1</color>
+    <color name="card_color">#FBEA76</color>
+
 
 </resources>
