@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">VCards</string>
+
+    <string name="tag_edit">Edit</string>
 </resources>

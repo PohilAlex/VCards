@@ -2,6 +2,7 @@ package com.pohil.vcards;
 
 
 import android.app.Application;
+import android.util.Log;
 
 public class App extends Application {
 
@@ -12,6 +13,9 @@ public class App extends Application {
         super.onCreate();
         dbManager = new DbManager(this);
         dbManager.init();
+        /*DeviceUuidFactory factory = new DeviceUuidFactory(this);
+        String uuid = factory.getDeviceUuid().toString();
+        Log.d("TEST", uuid);*/
     }
 
     public static DbManager getDbManager() {
