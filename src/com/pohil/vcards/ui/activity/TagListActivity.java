@@ -1,4 +1,4 @@
-package com.pohil.vcards;
+package com.pohil.vcards.ui.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,9 +11,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.pohil.vcards.dao.WordDao;
+import com.pohil.vcards.App;
+import com.pohil.vcards.R;
 import com.pohil.vcards.model.Tag;
-import com.pohil.vcards.model.Word;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class TagListActivity extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Intent intent = new Intent(TagListActivity.this, WordListActivity.class);
+                Intent intent = new Intent(TagListActivity.this, CardActivity.class);
                 intent.putExtra(WordListActivity.TAG_TAG, tags.get(position));
                 startActivity(intent);
             }

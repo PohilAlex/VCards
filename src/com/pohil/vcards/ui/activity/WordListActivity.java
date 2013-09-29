@@ -1,4 +1,4 @@
-package com.pohil.vcards;
+package com.pohil.vcards.ui.activity;
 
 
 import android.app.Activity;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import com.pohil.vcards.App;
+import com.pohil.vcards.R;
 import com.pohil.vcards.model.Tag;
 import com.pohil.vcards.model.Word;
 

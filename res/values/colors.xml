@@ -2,4 +2,7 @@
 <resources>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="list_background">#ffd1eeff</color>
+    <color name="list_separator">#ff838383</color>
+
 </resources>
